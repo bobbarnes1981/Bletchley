@@ -1,7 +1,7 @@
 language: csharp
-solution: Bletchley.Enigma.Simulator.sln
+solution: Bletchley.sln
 install:
- - nuget restore Bletchley.Enigma.Simulator.sln
+ - nuget restore Bletchley.sln
 script:
- - xbuild /p:Configuration=Release Bletchley.Enigma.Simulator.sln
+ - xbuild /p:Configuration=Release Bletchley.sln
  - mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Bletchley.Enigma.Simulator.UnitTests/bin/Release/Bletchley.Enigma.Simulator.UnitTests.dll
