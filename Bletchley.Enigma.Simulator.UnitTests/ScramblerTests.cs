@@ -135,5 +135,24 @@ namespace Bletchley.Enigma.Simulator.UnitTests
 
             Assert.That(plaintext, Is.EqualTo(expectedPlaintext));
         }
+
+        [Test]
+        public void CheckEncypheredMessageDecyphersWithRolloverAndRingF()
+        {
+            Scrambler s = new Scrambler(Reflector.ReflectorB(), Rotor.RotorI(Letters.A, Letters.A), Rotor.RotorII(Letters.A, Letters.A), Rotor.RotorIII(Letters.F, Letters.A));
+
+            Letters[] expectedPlaintext = LetterMapper.CreateLettersArray("THISMESSAGEWILLCAUSEROLLOVER");
+
+            Letters[] cyphertext = LetterMapper.CreateLettersArray("UFVWRFXPGFNQBAPWSVNSFXOGCPPK");
+
+            Letters[] plaintext = new Letters[cyphertext.Length];
+
+            for (int i = 0; i < cyphertext.Length; i++)
+            {
+                plaintext[i] = s.GetOutput(cyphertext[i]);
+            }
+
+            Assert.That(plaintext, Is.EqualTo(expectedPlaintext));
+        }
     }
 }
