@@ -1,0 +1,19 @@
+﻿https://en.wikipedia.org/wiki/Enigma_rotor_details
+
+In order to understand the effect of rotation on the rotors we demonstrate this by some examples.
+
+As an example, let us take rotor type I of Enigma I (see table below) without any ring setting offset. You can see that an A is encoded as an E, a B encoded as a K, and a K is encoded as an N. Notice that every letter is encoded into another.
+
+In the case of the reflectors, we take Wide B (Reflector B in the table below) where an A is returned as a Y and the Y is returned as an A. Notice that the wirings are connected as a loop between two letters.
+
+When a rotor has stepped, you must take into account the offset to know what the output is, and where it enters the next rotor.
+
+If for example rotor I is in the B-position, an A enters at the letter B which is wired to the K. Because of the offset this K enters the next rotor in the J position.
+
+With the rotors I, II and III (from left to right), wide B-reflector, all ring settings in A-position, and start position AAA, typing AAAAA will produce the encoded sequence BDZGO.
+
+I EKMFLGDQVZNTOWYHXUSPAIBRCJ 1930 Enigma I 
+II AJDKSIRUXBLHWTMCQGZNPYFVOE 1930 Enigma I 
+III BDFHJLCPRTXVZNYEIWGAKMUSQO 1930 Enigma I 
+
+Reflector B YRUHQSLDPXNGOKMIEBFZCWVJAT 
