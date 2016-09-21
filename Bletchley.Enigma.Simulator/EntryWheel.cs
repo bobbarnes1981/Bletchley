@@ -29,12 +29,12 @@ namespace Bletchley.Enigma.Simulator
 
         public Letters GetInput(Letters input)
         {
-            return (Letters)Array.IndexOf(m_map, input);
+            return m_map[(int)input];
         }
 
         public Letters GetOutput(Letters input)
         {
-            return m_map[(int)input];
+            return (Letters)Array.IndexOf(m_map, input);
         }
 
         /// <summary>

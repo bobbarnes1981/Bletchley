@@ -48,7 +48,7 @@ namespace Bletchley.Enigma.Simulator.UnitTests
 
             Letters result = e.GetInput(Letters.A);
 
-            Assert.That(result, Is.EqualTo(Letters.J));
+            Assert.That(result, Is.EqualTo(Letters.Q));
         }
 
         [Test]
@@ -56,7 +56,7 @@ namespace Bletchley.Enigma.Simulator.UnitTests
         {
             EntryWheel e = new EntryWheel(LetterMapper.CreateLettersArray("QWERTZUIOASDFGHJKPYXCVBNML"));
 
-            Letters result = e.GetOutput(Letters.J);
+            Letters result = e.GetOutput(Letters.Q);
 
             Assert.That(result, Is.EqualTo(Letters.A));
         }

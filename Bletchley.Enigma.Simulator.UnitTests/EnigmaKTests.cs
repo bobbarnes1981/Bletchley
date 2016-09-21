@@ -12,6 +12,11 @@ namespace Bletchley.Enigma.Simulator.UnitTests
         [Test]
         public void CheckInstructionManualMessage()
         {
+
+            //http://www.cryptomuseum.com/crypto/enigma/k/railway.htm
+            //http://www.cryptomuseum.com/crypto/enigma/i/index.htm
+
+
             //string expectedPlainText = "";
 
             //// Message Key: JEZA

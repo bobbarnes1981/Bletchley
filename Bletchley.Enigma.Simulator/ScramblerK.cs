@@ -12,7 +12,7 @@
 
         public virtual Letters GetOutput(Letters input)
         {
-            input = m_entryWheel.GetOutput(input);
+            input = m_entryWheel.GetInput(input);
 
             Letters output = base.GetOutput(input);
 

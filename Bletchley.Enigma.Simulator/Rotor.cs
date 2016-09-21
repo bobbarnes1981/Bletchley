@@ -141,7 +141,7 @@ namespace Bletchley.Enigma.Simulator
         /// <returns></returns>
         public static Rotor RotorKI(Letters ring, Letters position)
         {
-            return new Rotor(LetterMapper.CreateLettersArray("JGDQOXUSCAMIFRVTPNEWKBLZYH"), Letters.V, ring, position);
+            return new Rotor(LetterMapper.CreateLettersArray("JGDQOXUSCAMIFRVTPNEWKBLZYH"), Letters.N, ring, position);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Bletchley.Enigma.Simulator
         /// <returns></returns>
         public static Rotor RotorKII(Letters ring, Letters position)
         {
-            return new Rotor(LetterMapper.CreateLettersArray("NTZPSFBOKMWRCJDIVLAEYUXHGQ"), Letters.M, ring, position);
+            return new Rotor(LetterMapper.CreateLettersArray("NTZPSFBOKMWRCJDIVLAEYUXHGQ"), Letters.E, ring, position);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Bletchley.Enigma.Simulator
         /// <returns></returns>
         public static Rotor RotorKIII(Letters ring, Letters position)
         {
-            return new Rotor(LetterMapper.CreateLettersArray("JVIUBHTCDYAKEQZPOSGXNRMWFL"), Letters.G, ring, position); // Q?
+            return new Rotor(LetterMapper.CreateLettersArray("JVIUBHTCDYAKEQZPOSGXNRMWFL"), Letters.Y, ring, position);
         }
     }
 }
