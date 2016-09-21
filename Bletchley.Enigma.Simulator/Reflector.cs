@@ -37,6 +37,11 @@ namespace Bletchley.Enigma.Simulator
             return (Letters)Array.IndexOf(m_map, input);
         }
 
+        public static Reflector ReflectorA()
+        {
+            return new Reflector(LetterMapper.CreateLettersArray("EJMZALYXVBWFCRQUONTSPIKHGD"));
+        }
+
         public static Reflector ReflectorB()
         {
             return new Reflector(LetterMapper.CreateLettersArray("YRUHQSLDPXNGOKMIEBFZCWVJAT"));

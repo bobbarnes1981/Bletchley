@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnigmaM3.cs" />
     <Compile Include="LetterMapper.cs" />
     <Compile Include="Letters.cs" />
     <Compile Include="Plugboard.cs" />
