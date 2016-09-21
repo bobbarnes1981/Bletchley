@@ -135,15 +135,13 @@ namespace Bletchley.Enigma.Simulator.UnitTests
             Assert.That(right, Is.EqualTo(Letters.S));
         }
 
-        /// <summary>
-        /// Check example from wikipedia
-        /// </summary>
         [Test]
         public void CheckRotorIReturnsCorrectOutputToLeftWithPositionARingB()
         {
             Rotor r;
             Letters left;
 
+            // ring b, position a, a->k b->f
             r = Rotor.RotorI(Letters.B, Letters.A);
 
             //                         A
@@ -158,18 +156,17 @@ namespace Bletchley.Enigma.Simulator.UnitTests
 
             Assert.That(left, Is.EqualTo(Letters.F));
 
-            //        A
-            //EKMFLGDQVZNTOWYHXUSPAIBRCJ
+            // ring f, position y, a->w, b->h
             r = Rotor.RotorI(Letters.F, Letters.Y);
 
+            //        A
+            //EKMFLGDQVZNTOWYHXUSPAIBRCJ
             left = r.GetLeft(Letters.A);
 
             Assert.That(left, Is.EqualTo(Letters.W));
 
             //     B
             //EKMFLGDQVZNTOWYHXUSPAIBRCJ
-            r = Rotor.RotorI(Letters.F, Letters.Y);
-
             left = r.GetLeft(Letters.B);
 
             Assert.That(left, Is.EqualTo(Letters.H));
@@ -184,6 +181,7 @@ namespace Bletchley.Enigma.Simulator.UnitTests
             Rotor r;
             Letters right;
 
+            // ring b, position a, k->a f->b
             r = Rotor.RotorI(Letters.B, Letters.A);
 
             //                         A
@@ -198,18 +196,17 @@ namespace Bletchley.Enigma.Simulator.UnitTests
 
             Assert.That(right, Is.EqualTo(Letters.B));
 
-            //        A
-            //EKMFLGDQVZNTOWYHXUSPAIBRCJ
+            // ring f, position y, w->a, h->b
             r = Rotor.RotorI(Letters.F, Letters.Y);
 
+            //        A
+            //EKMFLGDQVZNTOWYHXUSPAIBRCJ
             right = r.GetRight(Letters.W);
 
             Assert.That(right, Is.EqualTo(Letters.A));
 
             //     B
             //EKMFLGDQVZNTOWYHXUSPAIBRCJ
-            r = Rotor.RotorI(Letters.F, Letters.Y);
-
             right = r.GetRight(Letters.H);
 
             Assert.That(right, Is.EqualTo(Letters.B));

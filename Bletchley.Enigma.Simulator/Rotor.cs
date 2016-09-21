@@ -13,11 +13,6 @@ namespace Bletchley.Enigma.Simulator
 
         private Letters m_position;
 
-        public Letters Position
-        {
-            get { return m_position; }
-        }
-
         public Rotor(Letters[] map, Letters notch, Letters ring, Letters position)
         {
             int requiredLetters = Enum.GetNames(typeof (Letters)).Length;
