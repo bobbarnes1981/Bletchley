@@ -36,5 +36,21 @@ namespace Bletchley.Enigma.Simulator.UnitTests
 
             Assert.That(exception.Message, Is.EqualTo("reflector contains direct map for A"));
         }
+
+        [Test]
+        public void CheckReflectorCreatesCorrectOutput()
+        {
+            Reflector r = new Reflector(LetterMapper.CreateLettersArray("ZYXWVUTSRQPONMLKJIHGFEDCBA"));
+
+            Letters result;
+
+            result = r.GetOutput(Letters.A);
+
+            Assert.That(result, Is.EqualTo(Letters.Z));
+
+            result = r.GetOutput(Letters.Z);
+
+            Assert.That(result, Is.EqualTo(Letters.A));
+        }
     }
 }

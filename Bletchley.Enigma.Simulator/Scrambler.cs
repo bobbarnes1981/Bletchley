@@ -1,8 +1,8 @@
 ﻿namespace Bletchley.Enigma.Simulator
 {
-    public class Scrambler
+    public abstract class Scrambler
     {
-        private readonly Reflector m_reflector;
+        private readonly IReflector m_reflector;
 
         private readonly Rotor m_rotorL;
 
@@ -10,7 +10,7 @@
 
         private readonly Rotor m_rotorR;
 
-        public Scrambler(Reflector reflector, Rotor rotorL, Rotor rotorM, Rotor rotorR)
+        public Scrambler(IReflector reflector, Rotor rotorL, Rotor rotorM, Rotor rotorR)
         {
             m_reflector = reflector;
             m_rotorL = rotorL;
@@ -18,7 +18,7 @@
             m_rotorR = rotorR;
         }
 
-        public Letters GetOutput(Letters input)
+        public virtual Letters GetOutput(Letters input)
         {
             // rotate if required
 

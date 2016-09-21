@@ -72,13 +72,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnigmaKTests.cs" />
     <Compile Include="EnigmaM3Tests.cs" />
     <Compile Include="LetterMapperTests.cs" />
     <Compile Include="PlugboardTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectorKTests.cs" />
+    <Compile Include="EntryWheelTests.cs" />
     <Compile Include="ReflectorTests.cs" />
     <Compile Include="RotorTests.cs" />
-    <Compile Include="ScramblerTests.cs" />
+    <Compile Include="Scrambler3Tests.cs" />
+    <Compile Include="ScramblerKTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bletchley.Enigma.Simulator\Bletchley.Enigma.Simulator.csproj">

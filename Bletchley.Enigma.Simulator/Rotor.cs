@@ -132,5 +132,38 @@ namespace Bletchley.Enigma.Simulator
         {
             return new Rotor(LetterMapper.CreateLettersArray("BDFHJLCPRTXVZNYEIWGAKMUSQO"), Letters.V, ring, position);
         }
+
+        /// <summary>
+        /// Enigma K Railway rotor I
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public static Rotor RotorKI(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("JGDQOXUSCAMIFRVTPNEWKBLZYH"), Letters.V, ring, position);
+        }
+
+        /// <summary>
+        /// Enigma K Railway rotor II
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public static Rotor RotorKII(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("NTZPSFBOKMWRCJDIVLAEYUXHGQ"), Letters.M, ring, position);
+        }
+
+        /// <summary>
+        /// Enigma K Railway rotor III
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public static Rotor RotorKIII(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("JVIUBHTCDYAKEQZPOSGXNRMWFL"), Letters.G, ring, position); // Q?
+        }
     }
 }

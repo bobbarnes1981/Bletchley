@@ -19,7 +19,7 @@ namespace Bletchley.Enigma.Simulator.UnitTests
             // Wheel order: II I III
             // Ring positions: 24 13 22
             // Plug Pairs: AM FI NV PS TU WZ
-            Scrambler s = new Scrambler(Reflector.ReflectorA(), Rotor.RotorII((Letters)23, Letters.A), Rotor.RotorI((Letters)12, Letters.B), Rotor.RotorIII((Letters)21, Letters.L));
+            Scrambler3 s = new Scrambler3(Reflector.ReflectorA(), Rotor.RotorII((Letters)23, Letters.A), Rotor.RotorI((Letters)12, Letters.B), Rotor.RotorIII((Letters)21, Letters.L));
 
             Plugboard p = new Plugboard(new Dictionary<Letters,Letters>
             {

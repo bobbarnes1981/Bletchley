@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace Bletchley.Enigma.Simulator
 {
-    public class Reflector : IReflector
+    public class EntryWheel
     {
         private readonly Letters[] m_map;
 
-        public Reflector(Letters[] map)
+        public EntryWheel(Letters[] map)
         {
             int requiredLetters = Enum.GetNames(typeof(Letters)).Length;
 
@@ -22,29 +22,28 @@ namespace Bletchley.Enigma.Simulator
                 {
                     throw new Exception(string.Format("duplicate letter {0} in map", map[i]));
                 }
-
-                if (map[i] == (Letters)i)
-                {
-                    throw new Exception(string.Format("reflector contains direct map for {0}", map[i]));
-                }
             }
 
             m_map = map;
         }
 
-        public Letters GetOutput(Letters input)
+        public Letters GetInput(Letters input)
         {
             return (Letters)Array.IndexOf(m_map, input);
         }
 
-        public static Reflector ReflectorA()
+        public Letters GetOutput(Letters input)
         {
-            return new Reflector(LetterMapper.CreateLettersArray("EJMZALYXVBWFCRQUONTSPIKHGD"));
+            return m_map[(int)input];
         }
 
-        public static Reflector ReflectorB()
+        /// <summary>
+        /// Enigma K railway entrywheel
+        /// </summary>
+        /// <returns></returns>
+        public static EntryWheel EntryWheelK()
         {
-            return new Reflector(LetterMapper.CreateLettersArray("YRUHQSLDPXNGOKMIEBFZCWVJAT"));
+            return new EntryWheel(LetterMapper.CreateLettersArray("QWERTZUIOASDFGHJKPYXCVBNML"));
         }
     }
 }
