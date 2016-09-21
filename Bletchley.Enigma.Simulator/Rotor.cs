@@ -88,6 +88,8 @@ namespace Bletchley.Enigma.Simulator
 
             // map to letter
             Letters offsetRight = (Letters)Array.IndexOf(m_map, left);
+
+            // offset position
             Letters right = (Letters)((int)offsetRight - (int)m_position);
             if (right < 0)
             {
@@ -131,6 +133,16 @@ namespace Bletchley.Enigma.Simulator
         public static Rotor RotorIII(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("BDFHJLCPRTXVZNYEIWGAKMUSQO"), Letters.V, ring, position);
+        }
+
+        public static Rotor RotorIV(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("ESOVPZJAYQUIRHXLNFTGKDCMWB"), Letters.J, ring, position);
+        }
+
+        public static Rotor RotorV(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("VZBRGITYUPSDNHLXAWMJQOFECK"), Letters.Z, ring, position);
         }
 
         /// <summary>

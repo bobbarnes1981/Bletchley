@@ -40,38 +40,7 @@ namespace Bletchley.Enigma.Simulator
 
         public Letters GetOutput(Letters input)
         {
-            // offset ring
-            input -= (int)m_ring;
-            if (input < 0)
-            {
-                input += Enum.GetNames(typeof(Letters)).Length;
-            }
-
-            // offset position
-            Letters offsetInput = (Letters)((int)input + (int)m_position);
-            if ((int)offsetInput >= Enum.GetNames(typeof(Letters)).Length)
-            {
-                offsetInput -= Enum.GetNames(typeof(Letters)).Length;
-            }
-
-            // map to letter
-            Letters output = (Letters)Array.IndexOf(m_map, offsetInput);
-
-            // offset position
-            Letters offsetOutput = (Letters)((int)output - (int)m_position);
-            if (offsetOutput < 0)
-            {
-                offsetOutput += Enum.GetNames(typeof(Letters)).Length;
-            }
-
-            // offset ring
-            offsetOutput += (int)m_ring;
-            if ((int)offsetOutput >= Enum.GetNames(typeof(Letters)).Length)
-            {
-                offsetOutput -= Enum.GetNames(typeof(Letters)).Length;
-            }
-
-            return offsetOutput;
+            throw new NotImplementedException();
         }
 
         /// <summary>

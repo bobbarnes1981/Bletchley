@@ -38,12 +38,21 @@ namespace Bletchley.Enigma.Simulator
         }
 
         /// <summary>
-        /// Enigma K railway entrywheel
+        /// Enigma qwertz entrywheel
         /// </summary>
         /// <returns></returns>
-        public static EntryWheel EntryWheelK()
+        public static EntryWheel EntryWheelQwertz()
         {
             return new EntryWheel(LetterMapper.CreateLettersArray("QWERTZUIOASDFGHJKPYXCVBNML"));
+        }
+
+        /// <summary>
+        /// Enigma direct entrywheel
+        /// </summary>
+        /// <returns></returns>
+        public static EntryWheel EntryWheelDirect()
+        {
+            return new EntryWheel(LetterMapper.CreateLettersArray("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         }
     }
 }

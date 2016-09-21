@@ -34,7 +34,7 @@ namespace Bletchley.Enigma.Simulator
 
         public Letters GetOutput(Letters input)
         {
-            return (Letters)Array.IndexOf(m_map, input);
+            return m_map[(int)input];
         }
 
         public static Reflector ReflectorA()

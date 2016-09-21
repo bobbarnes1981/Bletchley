@@ -10,12 +10,15 @@
 
         private readonly Rotor m_rotorR;
 
-        public Scrambler(IReflector reflector, Rotor rotorL, Rotor rotorM, Rotor rotorR)
+        private EntryWheel m_entryWheel;
+
+        public Scrambler(IReflector reflector, Rotor rotorL, Rotor rotorM, Rotor rotorR, EntryWheel entryWheel)
         {
             m_reflector = reflector;
             m_rotorL = rotorL;
             m_rotorM = rotorM;
             m_rotorR = rotorR;
+            m_entryWheel = entryWheel;
         }
 
         public virtual Letters GetOutput(Letters input)
@@ -42,6 +45,9 @@
                 m_rotorL.Rotate();
             }
 
+            // run through entry wheel
+            input = m_entryWheel.GetInput(input);
+
             // right to left
 
             Letters rotorRleft = m_rotorR.GetLeft(input);
@@ -61,6 +67,9 @@
             rotorRleft = m_rotorM.GetRight(rotorMLeft);
 
             Letters output = m_rotorR.GetRight(rotorRleft);
+            
+            // run through entry wheel
+            output = m_entryWheel.GetOutput(output);
 
             return output;
         }

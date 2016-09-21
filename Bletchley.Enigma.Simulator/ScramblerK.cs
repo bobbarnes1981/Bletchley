@@ -2,23 +2,9 @@
 {
     public class ScramblerK : Scrambler
     {
-        private EntryWheel m_entryWheel;
-
         public ScramblerK(ReflectorK reflector, Rotor rotorL, Rotor rotorM, Rotor rotorR, EntryWheel entryWheel)
-            : base(reflector, rotorL, rotorM, rotorR)
+            : base(reflector, rotorL, rotorM, rotorR, entryWheel)
         {
-            m_entryWheel = entryWheel;
-        }
-
-        public virtual Letters GetOutput(Letters input)
-        {
-            input = m_entryWheel.GetInput(input);
-
-            Letters output = base.GetOutput(input);
-
-            output = m_entryWheel.GetOutput(output);
-
-            return output;
         }
     }
 }
