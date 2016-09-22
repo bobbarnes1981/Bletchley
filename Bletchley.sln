@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bletchley.Enigma.Simulator"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bletchley.Enigma.Simulator.UnitTests", "Bletchley.Enigma.Simulator.UnitTests\Bletchley.Enigma.Simulator.UnitTests.csproj", "{064A12DA-DC94-4229-9FD5-CDF8E799B056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bletchley.Bombe.Simulator", "Bletchley.Bombe.Simulator\Bletchley.Bombe.Simulator.csproj", "{F28DC891-5678-43CF-A0EA-25BFA60A7C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bletchley.Bombe.Simulator.UnitTests", "Bletchley.Bombe.Simulator.UnitTests\Bletchley.Bombe.Simulator.UnitTests.csproj", "{2A0C9DDE-7F7B-40ED-90D5-20E713A1F5C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{064A12DA-DC94-4229-9FD5-CDF8E799B056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{064A12DA-DC94-4229-9FD5-CDF8E799B056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{064A12DA-DC94-4229-9FD5-CDF8E799B056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28DC891-5678-43CF-A0EA-25BFA60A7C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28DC891-5678-43CF-A0EA-25BFA60A7C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28DC891-5678-43CF-A0EA-25BFA60A7C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28DC891-5678-43CF-A0EA-25BFA60A7C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0C9DDE-7F7B-40ED-90D5-20E713A1F5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0C9DDE-7F7B-40ED-90D5-20E713A1F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0C9DDE-7F7B-40ED-90D5-20E713A1F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0C9DDE-7F7B-40ED-90D5-20E713A1F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

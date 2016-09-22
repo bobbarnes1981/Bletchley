@@ -5,3 +5,4 @@ install:
 script:
  - xbuild /p:Configuration=Release Bletchley.sln
  - mono ./packages/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Bletchley.Enigma.Simulator.UnitTests/bin/Release/Bletchley.Enigma.Simulator.UnitTests.dll
+ - mono ./packages/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Bletchley.Bombe.Simulator.UnitTests/bin/Release/Bletchley.Bombe.Simulator.UnitTests.dll
