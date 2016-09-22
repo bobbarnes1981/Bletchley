@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Enigma.cs" />
     <Compile Include="EnigmaK.cs" />
+    <Compile Include="EnigmaM4.cs" />
     <Compile Include="EnigmaM3.cs" />
     <Compile Include="IEnigma.cs" />
     <Compile Include="IReflector.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Rotor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrambler.cs" />
+    <Compile Include="Scrambler4.cs" />
     <Compile Include="Scrambler3.cs" />
     <Compile Include="ScramblerK.cs" />
   </ItemGroup>

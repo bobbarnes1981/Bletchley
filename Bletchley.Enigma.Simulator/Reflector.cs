@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Bletchley.Enigma.Simulator
 {
+    /// <summary>
+    /// A standard reflector
+    /// </summary>
     public class Reflector : IReflector
     {
         private readonly Letters[] m_map;
@@ -45,6 +48,11 @@ namespace Bletchley.Enigma.Simulator
         public static Reflector ReflectorB()
         {
             return new Reflector(LetterMapper.CreateLettersArray("YRUHQSLDPXNGOKMIEBFZCWVJAT"));
+        }
+
+        public static Reflector ReflectorThinB()
+        {
+            return new Reflector(LetterMapper.CreateLettersArray("ENKQAUYWJICOPBLMDXZVFTHRGS"));
         }
     }
 }

@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnigmaKTests.cs" />
+    <Compile Include="EnigmaM4Tests.cs" />
     <Compile Include="EnigmaM3Tests.cs" />
     <Compile Include="LetterMapperTests.cs" />
     <Compile Include="PlugboardTests.cs" />

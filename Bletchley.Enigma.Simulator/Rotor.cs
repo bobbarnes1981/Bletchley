@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Bletchley.Enigma.Simulator
 {
+    /// <summary>
+    /// A rotating encoder rotor
+    /// </summary>
     public class Rotor
     {
         private readonly Letters[] m_map;
@@ -106,6 +109,9 @@ namespace Bletchley.Enigma.Simulator
             return right;
         }
         
+        /// <summary>
+        /// Rotates the rotor one step
+        /// </summary>
         public void Rotate()
         {
             m_position++;
@@ -115,31 +121,69 @@ namespace Bletchley.Enigma.Simulator
             }
         }
 
+        /// <summary>
+        /// Gets a boolean value that indicates whether the rotor is in the notch
+        /// </summary>
         public bool InNotch
         {
             get { return m_notch == m_position; }
         }
 
+        public static Rotor RotorPassThrough()
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), Letters.A, Letters.A, Letters.A);
+        }
+
+        /// <summary>
+        /// Enigma standard rotor I
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Rotor RotorI(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("EKMFLGDQVZNTOWYHXUSPAIBRCJ"), Letters.Q, ring, position);
         }
 
+        /// <summary>
+        /// Enigma standard rotor II
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Rotor RotorII(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("AJDKSIRUXBLHWTMCQGZNPYFVOE"), Letters.E, ring, position);
         }
 
+        /// <summary>
+        /// Enigma standard rotor III
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Rotor RotorIII(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("BDFHJLCPRTXVZNYEIWGAKMUSQO"), Letters.V, ring, position);
         }
 
+        /// <summary>
+        /// Enigma standard rotor IV
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Rotor RotorIV(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("ESOVPZJAYQUIRHXLNFTGKDCMWB"), Letters.J, ring, position);
         }
 
+        /// <summary>
+        /// Enigma standard rotor V
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Rotor RotorV(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("VZBRGITYUPSDNHLXAWMJQOFECK"), Letters.Z, ring, position);
@@ -176,6 +220,17 @@ namespace Bletchley.Enigma.Simulator
         public static Rotor RotorKIII(Letters ring, Letters position)
         {
             return new Rotor(LetterMapper.CreateLettersArray("JVIUBHTCDYAKEQZPOSGXNRMWFL"), Letters.Y, ring, position);
+        }
+
+        /// <summary>
+        /// Enigma thin additional rotor beta
+        /// </summary>
+        /// <param name="ring"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public static Rotor RotorBeta(Letters ring, Letters position)
+        {
+            return new Rotor(LetterMapper.CreateLettersArray("LEYJVCNIXWPBQMDRTAKZGFUHOS"), Letters.A, ring, position);
         }
     }
 }
